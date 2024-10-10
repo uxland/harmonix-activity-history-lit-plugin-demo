@@ -2,12 +2,6 @@ import { PrimariaApi } from "@uxland/primary-shell";
 import { mockActivityHistoryItem } from "./mock";
 import { html } from "lit";
 
-export const bootstrapFeatures = (api: PrimariaApi) => {
-    setTimeout(() => {
-        executeInjectHistoryItemsTask(api);
-      }, 1000);
-}
-
 export const executeInjectHistoryItemsTask = (api: PrimariaApi) => {
     import("./plugin-history-item");
     const payload = {
@@ -19,7 +13,7 @@ export const executeInjectHistoryItemsTask = (api: PrimariaApi) => {
           }, 1000);
         });
       },
-    //   mapFn: mapCcToHistoryItem,
+      mapFn: (item)=> item,
       componentFactory: (item: unknown) => {
         return html`<plugin-history-item .item=${item}></plugin-history-item>`;
       },
