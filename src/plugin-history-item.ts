@@ -7,12 +7,12 @@ export class PluginHistoryItem extends LitElement {
   render() {
     return html`
         <div style="background-color: red">
-            hola
+           ${this.item.id} - ${this.item.date} - ${this.item.professional.name}
         </div>
       
     `
   } 
 
   @property()
-  item: string;
+  item: Object;
 }
