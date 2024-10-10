@@ -1,13 +1,13 @@
 export const mockActivityHistoryItem = {
-    id: 'activity123',
-    date: new Date('2024-12-01T10:00:00Z').toString(),
+    id: 'ID12345 ',
+    date: "03/06/2024",
     professional: {
       id: 'professional456',
-      name: 'Dr. Smith',
+      name: 'Dr. Martínez',
       speciality: 
       {
         id: "string", 
-        description: "string"
+        description: "Metge família"
       },
       role: {
         id: "string", 
@@ -18,24 +18,24 @@ export const mockActivityHistoryItem = {
     diagnostics: [
       {
         id: 'diagnostic789',
-        description: 'Diagnóstico primario',
+        description: 'Gonàlgia',
       },
     ],
     center: {
       id: 'center321',
-      description: 'Hospital Central',
+      description: 'CAP Manso',
     },
     up: {
       id: 'up654',
-      description: 'Unidad de Emergencias',
+      description: 'Unitat Emergències',
     },
     ep: {
       id: 'ep987',
-      description: 'Especialidad Pediátrica',
+      description: 'Pediatria',
     },
     service: {
       id: 'service543',
-      description: 'Servicio de Cardiología',
+      description: 'Cardiología',
     },
   };
   

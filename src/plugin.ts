@@ -4,7 +4,7 @@ import { PluginHeader } from "./plugin-header";
 
 export const initialize = (api: PrimariaApi) => {
     console.log(`Plugin ${api.pluginInfo.pluginId} initialized`);
-    api.regionManager.registerView(shellRegions.headerRightActions,{
+    api.regionManager.registerView(shellRegions.header,{
         id: api.pluginInfo.pluginId,
         factory: () => Promise.resolve(new PluginHeader(api)),
     });
@@ -13,6 +13,6 @@ export const initialize = (api: PrimariaApi) => {
 };
 export const dispose = (api: PrimariaApi) => {
     console.log(`Plugin ${api.pluginInfo.pluginId} disposed`);
-    api.regionManager.removeView(shellRegions.headerRightActions, "activity-history-view");
+    api.regionManager.removeView(shellRegions.header, "activity-history-view");
     Promise.resolve();
 }

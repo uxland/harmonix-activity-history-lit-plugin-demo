@@ -28,6 +28,6 @@ export const addItem = (api: PrimariaApi) => {
 }
 
 export const updateItem = (api: PrimariaApi) => { 
-  const newItem = {...mockActivityHistoryItem, date: new Date('2024-12-05T10:00:00Z').toString()}
+  const newItem = {...mockActivityHistoryItem, date: "10/10/2024"}
   return api.broker.send("update_history_item_request", {entityId: api.pluginInfo.pluginId, item: newItem})
 }
